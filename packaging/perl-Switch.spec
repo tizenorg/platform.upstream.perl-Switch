@@ -46,7 +46,6 @@ unconditionally executed once the switch value has been cached.
 
 %prep
 %setup -q -n %{cpan_name}-%{version}
-%patch1 -p1
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
