@@ -146,7 +146,7 @@ sub filter_blocks
 				die "Bad $keyword statement (problem in the code block?) near $Switch::file line ", line(substr($source,0, pos $source), $line), "\n";
 			};
 			my $code = filter_blocks(substr($source,$pos[0],$pos[4]-$pos[0]),line(substr($source,0,$pos[0]),$line));
-			$code =~ s/{/{ local \$::_S_W_I_T_C_H; Switch::switch $arg;/;
+			$code =~ s/{/{ local \$::_S_W_I_T_C_H; Switch::switch($arg);/;
 			$text .= $code . 'continue {last}';
 			next component;
 		}

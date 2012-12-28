@@ -26,11 +26,8 @@ Summary:        A switch statement for Perl
 Url:            http://search.cpan.org/dist/Switch/
 Group:          Development/Libraries/Perl
 Source:         http://www.cpan.org/authors/id/R/RG/RGARCIA/%{cpan_name}-%{version}.tar.gz
-# PATCH-FIX-UPSTREAM Switch-2.16-perl514.patch idoenmez@suse.de -- Fix test failures with Perl 5.14, RT #60380
-Patch1:         Switch-2.16-perl514.patch
 BuildRequires:  perl
 BuildRequires:  perl-macros
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildArch:      noarch
 %{perl_requires}
 
