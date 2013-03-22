@@ -24,12 +24,11 @@ License:        GPL-1.0+ or Artistic-1.0
 %define cpan_name Switch
 Summary:        A switch statement for Perl
 Url:            http://search.cpan.org/dist/Switch/
-Group:          Development/Libraries/Perl
+Group:          Development/Libraries
 Source:         http://www.cpan.org/authors/id/R/RG/RGARCIA/%{cpan_name}-%{version}.tar.gz
 BuildRequires:  perl
 BuildRequires:  perl-macros
 BuildArch:      noarch
-%{perl_requires}
 
 %description
 The Switch.pm module implements a generalized case mechanism that covers
@@ -61,6 +60,5 @@ make test
 
 %files -f %{name}.files
 %defattr(-,root,root,755)
-%doc Changes README
 
 %changelog
