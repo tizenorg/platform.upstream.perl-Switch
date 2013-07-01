@@ -26,6 +26,7 @@ Summary:        A switch statement for Perl
 Url:            http://search.cpan.org/dist/Switch/
 Group:          Development/Libraries
 Source:         http://www.cpan.org/authors/id/R/RG/RGARCIA/%{cpan_name}-%{version}.tar.gz
+Source1001: 	perl-Switch.manifest
 BuildRequires:  perl
 BuildRequires:  perl-macros
 BuildArch:      noarch
@@ -45,6 +46,7 @@ unconditionally executed once the switch value has been cached.
 
 %prep
 %setup -q -n %{cpan_name}-%{version}
+cp %{SOURCE1001} .
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -59,6 +61,7 @@ make test
 %perl_gen_filelist
 
 %files -f %{name}.files
+%manifest %{name}.manifest
 %defattr(-,root,root,755)
 
 %changelog
